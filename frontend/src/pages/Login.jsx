@@ -4,9 +4,9 @@ import { useNavigate, Link } from "react-router-dom";
 var BACKEND = "https://project-management-system-1-31jx.onrender.com/api";
 
 function Login() {
-  var [email, setEmail] = useState("");
+  var [email, setEmail]       = useState("");
   var [password, setPassword] = useState("");
-  var [error, setError] = useState("");
+  var [error, setError]       = useState("");
 
   var navigate = useNavigate();
 
@@ -19,12 +19,12 @@ function Login() {
     fetch(BACKEND + "/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: email, password: password }),
+      body: JSON.stringify({ email: email, password: password })
     })
-      .then(function (res) {
+      .then(function(res) {
         return res.json();
       })
-      .then(function (data) {
+      .then(function(data) {
         if (data.token) {
           localStorage.setItem("token", data.token);
           localStorage.setItem("userName", data.name);
@@ -33,7 +33,7 @@ function Login() {
           setError(data.message);
         }
       })
-      .catch(function () {
+      .catch(function() {
         setError("Something went wrong. Try again.");
       });
   }
@@ -41,6 +41,7 @@ function Login() {
   return (
     <div className="auth-wrapper">
       <div className="auth-box">
+
         <h4>Login</h4>
         <p className="sub">Project Management System</p>
 
@@ -49,9 +50,8 @@ function Login() {
           type="email"
           placeholder="Email"
           value={email}
-          onChange={function (e) {
-            setEmail(e.target.value);
-          }}
+          autoComplete="off"
+          onChange={function(e) { setEmail(e.target.value); }}
         />
 
         <input
@@ -59,9 +59,8 @@ function Login() {
           type="password"
           placeholder="Password"
           value={password}
-          onChange={function (e) {
-            setPassword(e.target.value);
-          }}
+          autoComplete="new-password"
+          onChange={function(e) { setPassword(e.target.value); }}
         />
 
         {error && <span className="error-text">{error}</span>}
@@ -73,6 +72,7 @@ function Login() {
         <p className="link-text">
           No account? <Link to="/register">Register here</Link>
         </p>
+
       </div>
     </div>
   );
