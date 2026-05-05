@@ -163,7 +163,7 @@ npm run dev
 
 ### 🔹 Frontend (Vercel)
 
-👉 <YOUR_FRONTEND_LINK>
+👉 <https://project-management-system-bice-phi.vercel.app/login>
 
 ### 🔹 Backend (Render)
 
