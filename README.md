@@ -244,6 +244,6 @@ This project successfully demonstrates the implementation of a **full stack web 
 
 ## 🔗 GitHub Repository
 
-👉 <YOUR_GITHUB_REPO_LINK>
+👉 <https://github.com/aayushgupta-4341/project-management-system.git>
 
 ---
