@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-var BACKEND = "http://localhost:5000/api";
+var BACKEND = "https://project-management-backend.onrender.com/api";
 
 function Login() {
   var [email, setEmail] = useState("");
