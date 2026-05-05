@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import TaskCard from "../components/TaskCard";
 
-var BACKEND = "https://project-management-backend.onrender.com/api";
+var BACKEND = "https://project-management-system-1-31jx.onrender.com/api";
 
 function Dashboard() {
   var [taskList, setTaskList] = useState([]);
