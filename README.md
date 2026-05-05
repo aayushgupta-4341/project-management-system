@@ -121,7 +121,7 @@ project-management-system/
 ### 🔹 1. Clone the Repository
 
 ```
-git clone <YOUR_GITHUB_REPO_LINK>
+git clone <https://github.com/aayushgupta-4341/project-management-system.git>
 cd project-management-system
 ```
 
